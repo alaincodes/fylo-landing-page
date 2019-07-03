@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --soft-blue: hsl(243, 86%, 85%);
+  --dark-blue: hsl(243, 87%, 12%);
+  --green: hsl(163, 95%, 43%);
+  --grey: hsl(0, 0%, 50%);
+  --main-font: "Raleway", sans-serif;
+  --secondary-font: "Open Sans", sans-serif;
+}
+
+html {
+  line-height: 1.4;
+}
+
+h1,
+h2 {
+  font-family: var(--main-font);
+  font-weight: 700;
+}
+
+p,
+a {
+  font-family: var(--secondary-font);
+}
+
+body {
+  height: 100vh;
+}
+
+.website-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Desktop left styling and config */
+
+.img-container {
+  background-image: linear-gradient(
+    to left bottom,
+    #110a6d,
+    #413590,
+    #6a5fb3,
+    #928cd7,
+    #bdbafa
+  );
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 40%;
+}
+
+.big-img {
+  width: 80%;
+}
+
+/* Desktop right side styling and config */
+
+.section-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  width: 60%;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 720px;
+  margin: auto;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20vh;
+  width: 100%;
+}
+
+.logo-img {
+  width: 90px;
+  height: 30px;
+  margin: 2rem;
+}
+
+.nav-container > ul {
+  list-style-type: none;
+  display: flex;
+  margin: 2rem;
+}
+
+.nav-container > ul > li {
+  color: var(--dark-blue);
+  padding: 1rem;
+  cursor: pointer;
+}
+
+ion-icon {
+  font-size: 24px;
+}
+
+h1 {
+  color: var(--dark-blue);
+  margin: 2rem 2rem;
+}
+
+p {
+  color: var(--grey);
+  margin: 2rem 2rem;
+  font-weight: 400;
+}
+
+h2 {
+  color: var(--dark-blue);
+  margin: 1rem 2rem;
+  text-align: left;
+}
+
+.signup-container {
+  margin: 2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.signup-container > input {
+  border: 1px solid hsla(0, 0%, 50%, 0.295);
+  box-shadow: 1px 1px hsla(0, 0%, 50%, 0.253);
+  border-radius: 2px;
+  height: 3em;
+  width: 300px;
+}
+
+.signup-container button {
+  background: var(--green);
+  padding: 1rem;
+  width: 150px;
+  height: 3em;
+  border-radius: 3px;
+  border: none;
+  box-shadow: 1px 1px hsla(0, 0%, 50%, 0.253);
+  margin-left: 1rem;
+  color: ghostwhite;
+  line-height: 1;
+}
+
+span {
+  display: flex;
+  justify-content: flex-end;
+  margin: 2rem;
+}
+
+a {
+  color: var(--dark-blue);
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 600px) {
+  .website-container {
+    flex-direction: column;
+  }
+
+  .img-container {
+    background-image: url(./images/bg-intro.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    min-width: 100%;
+    min-height: 100vh;
+  }
+
+  .big-img {
+    width: 80%;
+  }
+
+  .nav-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .logo-img {
+    float: left;
+    margin-left: 3rem;
+  }
+
+  .nav-container > ul {
+    margin-left: 3rem;
+  }
+
+  .nav-container > ul > li {
+    color: ghostwhite;
+  }
+
+  .section-container {
+    width: 100vw;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  .signup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+  }
+
+  .signup-container > input {
+    height: 3em;
+    width: 70%;
+    margin-bottom: 1rem;
+  }
+
+  .signup-container button {
+    height: 3em;
+    width: 40%;
+    margin-left: 0;
+  }
+}
